@@ -14,6 +14,9 @@ public class CambioMasaBolaDomino : MonoBehaviour
     public float valorMassPiezasDominoPorDefecto = 0f;
     public Slider sliderMassPiezasDomino;
     public Text txtValorMasaPiezasDomino;
+
+    
+
     void Start()
     {
         rbDeLaBolitaDomino = GetComponent<Rigidbody>();
@@ -21,6 +24,10 @@ public class CambioMasaBolaDomino : MonoBehaviour
 
         rbDeLasPiezasDomino = GetComponent<Rigidbody>();
         txtValorMasaPiezasDomino = GetComponent<Text>();
+
+
+        
+        
                 
     }
 
@@ -43,4 +50,6 @@ public class CambioMasaBolaDomino : MonoBehaviour
         valorMassPiezasDominoPorDefecto = sliderMassPiezasDomino.value;
         rbDeLasPiezasDomino.mass = valorMassPiezasDominoPorDefecto;
     }
+
+    
 }
