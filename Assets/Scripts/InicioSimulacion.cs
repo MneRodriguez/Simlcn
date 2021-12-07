@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class InicioSimulacion : MonoBehaviour
 {
     public Button BtnIniciarSimulacion;
+    private GameObject BotonArrancarSimulacion;
+
     public Button BtnRestartEscenaDomino;
     public Button BtnAbrirSegundaSimulacion;
 
@@ -24,15 +26,13 @@ public class InicioSimulacion : MonoBehaviour
 
         ImgDegradeNegroPreSimulacion = ImgDegradeNegroEnUI.GetComponent<Image>(); // ESTO HACIA FALTA PARA BORRAR EL DEGRADE NEGRO!!!
 
-        BtnIniciarSimulacion = GetComponent<Button>();
+
+        BtnIniciarSimulacion = BotonArrancarSimulacion.GetComponent<Button>();
+        //BtnIniciarSimulacion = GetComponent<Button>();
         BtnRestartEscenaDomino = GetComponent<Button>();
         BtnAbrirSegundaSimulacion = GetComponent<Button>();
-
+                     
                 
-        BtnRestartEscenaDomino.enabled = false;
-        BtnAbrirSegundaSimulacion.enabled = false;
-
-        
     }
 
     
@@ -46,13 +46,9 @@ public class InicioSimulacion : MonoBehaviour
         Time.timeScale = 1f;
 
         Destroy(TxtExplicacionDominoEnImgDegrade);
-        Destroy(ImgDegradeNegroPreSimulacion);
-        Destroy(ImgDegradeNegroEnUI.gameObject);
+        Destroy(ImgDegradeNegroPreSimulacion);        
         Destroy(BtnIniciarSimulacion.gameObject);
-
-        BtnRestartEscenaDomino.enabled = true;
-        BtnAbrirSegundaSimulacion.enabled = true;
-
-        
+             
+                
     }
 }
