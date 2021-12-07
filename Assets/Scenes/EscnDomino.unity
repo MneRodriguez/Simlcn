@@ -3257,6 +3257,7 @@ MonoBehaviour:
   BtnIniciarSimulacion: {fileID: 1993800596}
   BtnRestartEscenaDomino: {fileID: 1662859402}
   BtnAbrirSegundaSimulacion: {fileID: 1866007870}
+  TxtExplicacionDominoEnImgDegrade: {fileID: 1662182195}
   ImgDegradeNegroPreSimulacion: {fileID: 556684201}
 --- !u!1 &1993800594
 GameObject:
@@ -3294,7 +3295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -434}
+  m_AnchoredPosition: {x: 0, y: -339}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993800596
