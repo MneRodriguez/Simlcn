@@ -11,8 +11,15 @@ public class InicioSimulacion : MonoBehaviour
     public Button BtnRestartEscenaDomino;
     public Button BtnAbrirSegundaSimulacion;
 
+    public Button BtnRestartEscenaImpulsoRampa;
+    public Button BtnAbrirPrimeraSimulacion;
+    public Button BtnAbrirTerceraSimulacion;
+
     public Text TxtExplicacionDominoEnImgDegrade;
     private GameObject TxtExplicacionDelDomino;
+
+    public Text TxtExplicacionImpulsoEnRampaEnImgDegrade;
+    private GameObject TxtExplicacionDelImpulsoEnRampa;
 
     public Image ImgDegradeNegroPreSimulacion;
     private GameObject ImgDegradeNegroEnUI; // ERA NECESARIO PARA LUEGO BORRAR EL DEGRADE NEGRO!!!
@@ -24,15 +31,24 @@ public class InicioSimulacion : MonoBehaviour
 
         TxtExplicacionDominoEnImgDegrade = TxtExplicacionDelDomino.GetComponent<Text>();
 
+        TxtExplicacionImpulsoEnRampaEnImgDegrade = TxtExplicacionDelImpulsoEnRampa.GetComponent<Text>();
+
         ImgDegradeNegroPreSimulacion = ImgDegradeNegroEnUI.GetComponent<Image>(); // ESTO HACIA FALTA PARA BORRAR EL DEGRADE NEGRO!!!
 
 
         BtnIniciarSimulacion = BotonArrancarSimulacion.GetComponent<Button>();
-        //BtnIniciarSimulacion = GetComponent<Button>();
+        
         BtnRestartEscenaDomino = GetComponent<Button>();
         BtnAbrirSegundaSimulacion = GetComponent<Button>();
-                     
-                
+
+
+        BtnRestartEscenaImpulsoRampa = GetComponent<Button>();
+        BtnAbrirPrimeraSimulacion = GetComponent<Button>();
+        BtnAbrirTerceraSimulacion = GetComponent<Button>();
+
+
+
+
     }
 
     
@@ -48,7 +64,10 @@ public class InicioSimulacion : MonoBehaviour
         Destroy(TxtExplicacionDominoEnImgDegrade);
         Destroy(ImgDegradeNegroPreSimulacion);        
         Destroy(BtnIniciarSimulacion.gameObject);
-             
-                
+
+        Destroy(TxtExplicacionImpulsoEnRampaEnImgDegrade);
+        
+
+
     }
 }
