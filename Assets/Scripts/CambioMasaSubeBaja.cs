@@ -28,11 +28,11 @@ public class CambioMasaSubeBaja : MonoBehaviour
 
     void Start()
     {
-        rbCuboImpulsador = GetComponent<Rigidbody>();
+        /*rbCuboImpulsador = GetComponent<Rigidbody>();
         txtValorMasaCuboImpulsador = GetComponent<Text>();
 
         rbCuboSiendoImpulsado = GetComponent<Rigidbody>();
-        txtValorMasaCuboSiendoImpulsado = GetComponent<Text>();
+        txtValorMasaCuboSiendoImpulsado = GetComponent<Text>();*/
 
     }
 

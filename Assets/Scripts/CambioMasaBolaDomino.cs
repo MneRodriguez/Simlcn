@@ -19,21 +19,22 @@ public class CambioMasaBolaDomino : MonoBehaviour
 
     void Start()
     {
-        rbDeLaBolitaDomino = GetComponent<Rigidbody>();
+        /*rbDeLaBolitaDomino = GetComponent<Rigidbody>(); //NO DEBIA PONER ESTAS LINEAS, SI NO EN EL INSPECTOR NO SE REFERENCIABAN AL ARRANCAR LA ESCENA
         txtValorMasaBolita = GetComponent<Text>();
 
-        rbDeLasPiezasDomino = GetComponent<Rigidbody>();
-        txtValorMasaPiezasDomino = GetComponent<Text>();
-
+        //rbDeLasPiezasDomino = GetComponent<Rigidbody>();
+        txtValorMasaPiezasDomino = GetComponent<Text>();*/
 
         
-        
-                
+
+
+
     }
 
     
     void Update()
     {
+        // ESTOS DEBEN IR ACA, SI NO NO ANDAN!!!!
         txtValorMasaBolita.text = "Masa de la bola = " + sliderMassBolita.value;
 
         txtValorMasaPiezasDomino.text = "Masa de las piezas del dominó = " + sliderMassPiezasDomino.value;
