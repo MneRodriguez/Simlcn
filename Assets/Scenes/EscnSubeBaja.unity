@@ -392,7 +392,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1543534048}
-        m_MethodName: IniciarSimulacion
+        m_MethodName: IniciarSimulacion2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2573,16 +2573,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1543534043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 823931accac8e58479b72fc215c43f66, type: 3}
+  m_Script: {fileID: 11500000, guid: 577050cde6e274b428b01985dc5dc14e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tomarSlidersSimulacion2: {fileID: 1699315654}
   BtnIniciarSimulacion: {fileID: 232708137}
   BtnRestartEscenaDomino: {fileID: 0}
   BtnAbrirSegundaSimulacion: {fileID: 0}
   BtnRestartEscenaImpulsoRampa: {fileID: 553366650}
   BtnAbrirPrimeraSimulacion: {fileID: 589062199}
   BtnAbrirTerceraSimulacion: {fileID: 1480204123}
-  TxtExplicacionDominoEnImgDegrade: {fileID: 0}
   TxtExplicacionImpulsoEnRampaEnImgDegrade: {fileID: 665955415}
   ImgDegradeNegroPreSimulacion: {fileID: 1926315962}
 --- !u!1 &1599993593

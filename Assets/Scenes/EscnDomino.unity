@@ -3156,6 +3156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823931accac8e58479b72fc215c43f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tomarSlidersSimulacion1: {fileID: 1408821375}
   BtnIniciarSimulacion: {fileID: 1993800596}
   BtnRestartEscenaDomino: {fileID: 1662859402}
   BtnAbrirSegundaSimulacion: {fileID: 1866007870}
