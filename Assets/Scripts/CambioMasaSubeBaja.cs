@@ -25,6 +25,8 @@ public class CambioMasaSubeBaja : MonoBehaviour
     public Text txtValorMasaRampaSobrePuntoApoyo;
     // VER SI AGREGO CAMBIO DE SCALE O ROTACION DE LA RAMPA
 
+    public Joint fixedJointDeRampa;
+
 
     void Start()
     {
@@ -34,6 +36,7 @@ public class CambioMasaSubeBaja : MonoBehaviour
         rbCuboSiendoImpulsado = GetComponent<Rigidbody>();
         txtValorMasaCuboSiendoImpulsado = GetComponent<Text>();*/
 
+        
     }
 
     
@@ -44,6 +47,13 @@ public class CambioMasaSubeBaja : MonoBehaviour
         txtValorMasaCuboSiendoImpulsado.text = "Masa del cubo siendo impulsado = " + sliderMassCuboSiendoImpulsado.value;
 
         // VER SI PONGO LO DEL CAMBIO DE SCALE O ROTACION DE LA RAMPA
+
+        // ESTA LINEA HACE QUE SE ROMPA LA RAMPA APENAS ARRANCA LA ESCENA!!!
+
+        if (valorMasaCuboImpulsadorPorDefecto == 20) // SI LA MASA DEL CUBO IMPULSADOR VALE 20 (misma cant que la rampa puede soportar)...
+        {
+            RomperRampa();
+        }
     }
 
     public void AjusteMassCuboImpulsador()
@@ -58,5 +68,20 @@ public class CambioMasaSubeBaja : MonoBehaviour
         valorMasaCuboSiendoImpulsadorPorDefecto = sliderMassCuboSiendoImpulsado.value;
         rbCuboSiendoImpulsado.mass = valorMasaCuboSiendoImpulsadorPorDefecto;
         // VER SI AGREGO CAMBIO DE SCALE
+    }
+
+    public void RomperRampa()
+    {
+        //fixedJointDeRampa.breakForce = 20;       
+        Destroy(GetComponent<FixedJoint>());        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Rampa1") && valorMasaCuboImpulsadorPorDefecto == 20)
+        {
+            fixedJointDeRampa.breakForce = 20;
+            RomperRampa();
+        }
     }
 }
