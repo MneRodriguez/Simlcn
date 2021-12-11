@@ -46,6 +46,8 @@ public class CambioMasaSubeBaja : MonoBehaviour
 
         txtValorMasaCuboSiendoImpulsado.text = "Masa del cubo siendo impulsado = " + sliderMassCuboSiendoImpulsado.value;
 
+        txtValorMasaRampaSobrePuntoApoyo.text = "Masa de la rampa = " + sliderMassRampaSobrePuntoApoyo.value;
+
         // VER SI PONGO LO DEL CAMBIO DE SCALE O ROTACION DE LA RAMPA
 
         // ESTA LINEA HACE QUE SE ROMPA LA RAMPA APENAS ARRANCA LA ESCENA!!!
@@ -68,6 +70,12 @@ public class CambioMasaSubeBaja : MonoBehaviour
         valorMasaCuboSiendoImpulsadorPorDefecto = sliderMassCuboSiendoImpulsado.value;
         rbCuboSiendoImpulsado.mass = valorMasaCuboSiendoImpulsadorPorDefecto;
         // VER SI AGREGO CAMBIO DE SCALE
+    }
+
+    public void AjusteMassRampa()
+    {
+        valorMasaRampaSobrePuntoApoyo = sliderMassRampaSobrePuntoApoyo.value;
+        rbRampaSobrePuntoApoyo.mass = valorMasaRampaSobrePuntoApoyo;
     }
 
     public void RomperRampa()
