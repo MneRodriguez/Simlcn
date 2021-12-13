@@ -15,7 +15,10 @@ public class CambioMasaBolaDomino : MonoBehaviour
     public Slider sliderMassPiezasDomino;
     public Text txtValorMasaPiezasDomino;
 
-    
+    public Transform palaImpulsadoraDeBolita;
+    public float valorRotacionDeLaPalaImpulsadora = 0f;
+    public Slider sliderRotacionPalaImpulsadora;
+    public Text txtValorRotacionPalaImpulsadora;
 
     void Start()
     {
@@ -38,6 +41,8 @@ public class CambioMasaBolaDomino : MonoBehaviour
         txtValorMasaBolita.text = "Masa de la bola = " + sliderMassBolita.value;
 
         txtValorMasaPiezasDomino.text = "Masa de las piezas del dominó = " + sliderMassPiezasDomino.value;
+
+        txtValorRotacionPalaImpulsadora.text = "Rotacion de la pala impulsadora = " + sliderRotacionPalaImpulsadora.value;
     }
 
     public void AjustarMassBolitaDomino()
@@ -52,5 +57,10 @@ public class CambioMasaBolaDomino : MonoBehaviour
         rbDeLasPiezasDomino.mass = valorMassPiezasDominoPorDefecto;
     }
 
+    public void RegularRotacionPalaImpulsadora()
+    {
+        valorRotacionDeLaPalaImpulsadora = sliderRotacionPalaImpulsadora.value;
+        palaImpulsadoraDeBolita.transform.rotation = valorRotacionDeLaPalaImpulsadora;
+    }
     
 }
