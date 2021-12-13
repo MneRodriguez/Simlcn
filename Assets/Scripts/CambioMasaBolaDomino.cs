@@ -60,7 +60,7 @@ public class CambioMasaBolaDomino : MonoBehaviour
     public void RegularRotacionPalaImpulsadora()
     {
         valorRotacionDeLaPalaImpulsadora = sliderRotacionPalaImpulsadora.value;
-        palaImpulsadoraDeBolita.transform.rotation = valorRotacionDeLaPalaImpulsadora;
+        palaImpulsadoraDeBolita.transform.localEulerAngles = new Vector3(-valorRotacionDeLaPalaImpulsadora, 0f, 0f);
     }
     
 }
