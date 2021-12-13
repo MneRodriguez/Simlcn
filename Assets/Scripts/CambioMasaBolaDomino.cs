@@ -15,10 +15,16 @@ public class CambioMasaBolaDomino : MonoBehaviour
     public Slider sliderMassPiezasDomino;
     public Text txtValorMasaPiezasDomino;
 
+
     public Transform palaImpulsadoraDeBolita;
     public float valorRotacionDeLaPalaImpulsadora = 0f;
     public Slider sliderRotacionPalaImpulsadora;
     public Text txtValorRotacionPalaImpulsadora;
+
+    public Rigidbody rbDeLaPala;
+    public float valorMassPala;
+    public Slider sliderMassPala;
+    public Text txtValorMasaPala;
 
     void Start()
     {
@@ -42,7 +48,8 @@ public class CambioMasaBolaDomino : MonoBehaviour
 
         txtValorMasaPiezasDomino.text = "Masa de las piezas del dominó = " + sliderMassPiezasDomino.value;
 
-        txtValorRotacionPalaImpulsadora.text = "Rotacion de la pala impulsadora = " + sliderRotacionPalaImpulsadora.value;
+        txtValorRotacionPalaImpulsadora.text = "Rotacion de la pala impulsadora = " + sliderRotacionPalaImpulsadora.value + "°";
+        txtValorMasaPala.text = "Masa de la pala = " + sliderMassPala.value;
     }
 
     public void AjustarMassBolitaDomino()
@@ -57,10 +64,17 @@ public class CambioMasaBolaDomino : MonoBehaviour
         rbDeLasPiezasDomino.mass = valorMassPiezasDominoPorDefecto;
     }
 
+
     public void RegularRotacionPalaImpulsadora()
     {
         valorRotacionDeLaPalaImpulsadora = sliderRotacionPalaImpulsadora.value;
-        palaImpulsadoraDeBolita.transform.localEulerAngles = new Vector3(-valorRotacionDeLaPalaImpulsadora, 0f, 0f);
+        palaImpulsadoraDeBolita.transform.localEulerAngles = new Vector3(-valorRotacionDeLaPalaImpulsadora, 0f, 0f); // HABIA QUE PONERLO CON EL '-' O SEA EN NEGATIVO PARA QUE EL OBJETO GIRE EN POSITIVO, Y NO EN NEGATIVO COMO ME ESTABA PASANDO!!!
+    }
+    
+    public void AjustarMassPala()
+    {
+        valorMassPala = sliderMassPala.value;
+        rbDeLaPala.mass = valorMassPala;
     }
     
 }

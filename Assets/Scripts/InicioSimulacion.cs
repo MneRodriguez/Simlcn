@@ -57,6 +57,7 @@ public class InicioSimulacion : MonoBehaviour
         
         tomarSlidersSimulacion1.sliderMassBolita.interactable = false;
         tomarSlidersSimulacion1.sliderMassPiezasDomino.interactable = false;
-                
+        tomarSlidersSimulacion1.sliderRotacionPalaImpulsadora.interactable = false;
+        tomarSlidersSimulacion1.sliderMassPala.interactable = false;
     }
 }
